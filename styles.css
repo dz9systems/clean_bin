@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat';
+}
+
+
+/******************* NAV SECTION ****************/
+nav {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  margin-bottom: 3rem;
+
+  /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    display:none;
+  }
+}
+
+
+nav p, h1 {
+  font-family: Thicccboi, sans-serif;
+  margin:2rem;
+}
+
+.call-to-action {
+  margin-left: 2rem;
+}
+
+.call-us-now {
+  font-size: 1rem;
+}
+
+.phone {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-right:-1.5rem;
+  margin-left:6rem;
+  /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    margin:0;
+  }
+}
+
+.phone img {
+  height: 2rem;
+}
+
+.call-to-action p {
+  margin: 0.5rem;
+}
+
+
+nav h1 {
+  color:#CB6CE6;
+  font-size: 3rem;
+}
+
+
+/************************************************/
+
+
+
+
+/******************* HERO SECTION ****************/
+.hero {
+  display: flex;
+  margin:2rem;
+   /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    display:flex;
+    flex-direction: column;
+
+  }
+}
+
+.logo {
+  width:75%;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px) {
+      width:100%;
+    }
+}
+
+
+.logo img {
+  width: 100%;
+}
+
+
+/* FORM STYLES */
+.lead-form-section {
+  width: 50%;
+   /* MEDIA QUERIES */
+  @media only screen and (max-width:768px) {
+    width:80%;
+  }
+}
+
+.frequency {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.frequency label {
+  margin-right: 1rem;
+}
+
+
+form {
+  display: grid;
+  padding:2rem;
+  grid-gap: 10px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius:5%;
+
+  /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    width:100%;
+  }
+}
+
+label {
+  font-family: 'Montserrat';
+  margin-bottom:-1rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #cb6ce7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top:1rem;
+  padding:1rem;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px){
+      width:100%;
+
+    }
+}
+
+button:hover {
+  background-color: #6EDDE2;
+}
+/********************************************/
+
+
+
+
+
+/*************** PRICING SECTIONS ************/
+.pricing-header {
+  display: flex;
+  justify-content: center;
+  margin: 8rem 0 4rem 0 ;
+  font-size: 3rem;
+  color:#5dd5db;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin:4rem;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px){
+      display:flex;
+      flex-direction: column;
+      margin:1rem;
+    }
+}
+
+.pricing-option {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin:1rem;
+  padding: 2rem;
+}
+/********************************/
+
+
+
+/* FOOTER STYLES */
+
+footer {
+  padding:6rem 2rem;
+  border-top:1px solid gray;
+  margin-top:10rem;
+  display: flex;
+  align-items: center;
+      /* MEDIA QUERIES */
+     @media only screen and (max-width:768px){
+     flex-direction:column;
+     margin-top:4rem;
+     margin-bottom:2rem;
+    }
+}
+
+footer img {
+  width: 25%;
+  height: 25%;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px){
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-left:3rem;
+  width: 40%;
+  /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    flex-direction:column;
+    margin-top:0rem;
+    margin:0;
+    align-items:center;
+    font-size:1.5rem;
+  }
+}
+
+.call-to-action-footer {
+  display:flex;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px){
+      flex-direction: row;
+      margin-top: 2rem;
+      font-size:1.5rem;
+      align-items: center;
+  }
+}
+
+.call-to-action-footer .phone img {
+  height: 100%;
+  width: 100%;
+ }
+

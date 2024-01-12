@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+
+<body>
+  <div style="display:flex; justify-content: center; flex-direction: column; align-items:center">
+    <div>
+      <h1>QR Code Generator</h1>
+    <p>Enter the data you want to encode in the QR code below and click the "Generate QR Code" button.</p>
+    <input type="text" id="qrtext" value="www.cleanbin.com">
+    <button onclick="generateQRCode()">Generate QR Code</button>
+    </div>
+    <div style="display:flex; justify-content: center; margin-top:4rem;">
+      <div id="qrcode"></div>
+    </div>
+  </div>
+
+
+  <script>
+    function generateQRCode() {
+    // Get the input value
+    var qrData = document.getElementById("qrtext").value;
+
+    // Create QR code
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: qrData,
+      width: 300,
+      height: 300,
+    });
+  }
+  </script>
+
+</body>
+
+</html>
