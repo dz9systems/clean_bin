@@ -33,7 +33,9 @@ nav p, h1 {
 .call-to-action {
   margin-left: 2rem;
 }
-
+.call-to-action p {
+  text-align: center;
+}
 .call-us-now {
   font-size: 1rem;
 }
@@ -108,14 +110,10 @@ nav h1 {
   }
 }
 
-.frequency {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-}
+
 
 .frequency label {
-  /* margin-right: 1rem; */
+  margin-right: 1rem;
 }
 
 
@@ -247,18 +245,21 @@ footer img {
 
 .call-to-action-footer {
   display:flex;
+  margin-left:3rem;
     /* MEDIA QUERIES */
     @media only screen and (max-width:768px){
       flex-direction: row;
       margin-top: 2rem;
       font-size:1.5rem;
       align-items: center;
+      justify-content: center;
+      margin-left:0rem;
   }
 }
 
-.call-to-action-footer .phone img {
-  height: 100%;
-  width: 100%;
+.call-to-action-footer .call-to-action {
+ margin:0;
+
  }
 
 
