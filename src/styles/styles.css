@@ -125,6 +125,7 @@ form {
   /* MEDIA QUERIES */
   @media only screen and (max-width:768px){
     width:auto;
+    border-radius:0;
   }
 }
 
