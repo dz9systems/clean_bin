@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Clean Bin</title>
+  <script src="utils/main.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <p>Prices</p>
     <p>Contact</p>
     <div class="phone">
-      <img src="phone.png" alt="phone" />
+      <img src="assets/phone.png" alt="phone" />
     </div>
     <div class="call-to-action">
       <p class="call-us-now">CALL US NOW</p>
@@ -24,15 +25,16 @@
   </nav>
   <div class="hero">
     <div class="logo">
-      <img src="clean-bin-web.png" alt="logo">
+      <img src="assets/clean-bin-web.png" alt="logo">
     </div>
     <div class="lead-form-section" id="form">
-      <form action="" method="POST">
+      <form id="paymentForm" onsubmit="submitForm(event)">
         <input type="text" id="name" name="name" required placeholder="Your Name">
         <input type="email" id="email" name="email" required placeholder="Your Email">
         <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
         <input type="text" id="address" name="address" required placeholder="Your Address">
-        <input type="text" id="time" name="time" required placeholder="Time">
+        <label for="time">Select a Time:</label>
+        <input type="time" id="time" name="time" required placeholder="Time">
         <label for="datepicker">Select a date:</label>
         <input type="date" id="datepicker" name="datepicker" required>
         <div class="frequency">
@@ -60,7 +62,7 @@
       <p>$50/cleaning for 2 bins.</p>
       <p>$5 for each extra bin.</p>
       <p>*Done on a one-off basis. Additional cleanings billed separately.</p>
-      <button onclick="scheduleService('One-Time Cleaning')">Click to Schedule</button>
+      <button onclick="scheduleService2('One-Time Cleaning')">Click to Schedule</button>
     </div>
 
     <!-- MONTHLY SERVICE (EVERY 4 WEEKS) -->
@@ -70,7 +72,7 @@
       <p>$5 for each extra bin.</p>
       <p>12 cleanings per year.</p>
       <p>3 cleaning minimum.</p>
-      <button onclick="scheduleService('Monthly Service')">Click to Schedule</button>
+      <button onclick="scheduleService2('Monthly Service')">Click to Schedule</button>
     </div>
 
     <!-- BI-MONTHLY SERVICE (EVERY 8 WEEKS) -->
@@ -80,29 +82,50 @@
       <p>$5 for each extra bin.</p>
       <p>6 cleanings per year.</p>
       <p>3 cleaning minimum.</p>
-      <button onclick="scheduleService('Bi-Monthly Service')">Click to Schedule</button>
+      <button onclick="scheduleService2('Bi-Monthly Service')">Click to Schedule</button>
     </div>
 
   </div>
 
   <footer>
-    <img src="clean-bin-web.png" alt="logo">
+    <img src="assets/clean-bin-web.png" alt="logo">
     <div class="links">
-        <p>Services</p>
-        <p>About us</p>
-        <p>Prices</p>
-        <p>Contact</p>
+      <p>Services</p>
+      <p>About us</p>
+      <p>Prices</p>
+      <p>Contact</p>
     </div>
     <div class="call-to-action-footer">
-        <div class="phone">
-            <img src="phone.png" alt="phone">
-        </div>
-        <div class="call-to-action">
-            <p class="call-us-now">CALL US NOW</p>
-            <p>(650) 313 - 4323</p>
-        </div>
+      <div class="phone">
+        <img src="assets/phone.png" alt="phone">
+      </div>
+      <div class="call-to-action">
+        <p class="call-us-now">CALL US NOW</p>
+        <p>(650) 313 - 4323</p>
+      </div>
     </div>
-</footer>
+  </footer>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <form id="modalForm" onsubmit="submitForm(event)">
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+        <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+        <input type="text" id="address" name="address" required placeholder="Your Address">
+        <label for="time">Select a Time:</label>
+        <input type="time" id="time" name="time" required placeholder="Time">
+        <label for="datepicker">Select a date:</label>
+        <input type="date" id="datepicker" name="datepicker" required>
+        <button type="submit">Submit</button>
+        <div id="scheduleService" data-set=""></div>
+      </form>
+
+    </div>
+  </div>
+
 
 
 </body>

@@ -251,3 +251,58 @@ footer img {
   width: 100%;
  }
 
+
+
+ .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal form {
+  background-color: #fff;
+  margin: auto; /* Center horizontally */
+     /* MEDIA QUERIES */
+     @media only screen and (max-width:768px){
+      width: 70%;
+      border-radius:0%;
+    }
+}
+
+.modal-content {
+  margin: auto; /* Center horizontally */
+  padding: 3rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+    /* MEDIA QUERIES */
+    @media only screen and (max-width:768px){
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-top: 20%;
+    }
+}
+
+.close {
+  color:white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: right;
+  /* MEDIA QUERIES */
+  @media only screen and (max-width:768px){
+    width: 90%;
+
+  }
+}
+
+.close:hover {
+  color: black;
+}
